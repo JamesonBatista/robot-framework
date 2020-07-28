@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on darwin)" generated="20200727 21:38:19.583" rpa="false">
-<suite id="s1" name="Steps" source="/Users/jameson.b.araujo/Desktop/Viajenet/tests/steps">
-<suite id="s1-s1" name="Validation" source="/Users/jameson.b.araujo/Desktop/Viajenet/tests/steps/validation.robot">
-<test id="s1-s1-t1" name="Scenario: Buy Ticket">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on darwin)" generated="20200728 09:55:38.148" rpa="false">
+<suite id="s1" name="Validation" source="/Users/jameson.b.araujo/Desktop/Viajenet/tests/steps/validation.robot">
+<test id="s1-t1" name="Scenario: Buy Ticket">
 <kw name="Browser open" library="setup" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -10,55 +9,288 @@
 <arg>${url_base}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20200727 21:38:20.425" level="INFO">Opening browser 'chrome' to base url 'https://www.viajanet.com.br/'.</msg>
-<status status="PASS" starttime="20200727 21:38:20.424" endtime="20200727 21:38:23.864"></status>
+<msg timestamp="20200728 09:55:39.006" level="INFO">Opening browser 'chrome' to base url 'https://www.viajanet.com.br/'.</msg>
+<status status="PASS" starttime="20200728 09:55:39.004" endtime="20200728 09:55:44.134"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200727 21:38:23.865" endtime="20200727 21:38:24.023"></status>
+<status status="PASS" starttime="20200728 09:55:44.134" endtime="20200728 09:55:44.299"></status>
 </kw>
-<status status="PASS" starttime="20200727 21:38:20.423" endtime="20200727 21:38:24.024"></status>
+<status status="PASS" starttime="20200728 09:55:39.002" endtime="20200728 09:55:44.299"></status>
 </kw>
-<kw name="Given I buy a flight ticket">
-<msg timestamp="20200727 21:38:24.030" level="FAIL">No keyword with name 'Given I buy a flight ticket' found.</msg>
-<status status="FAIL" starttime="20200727 21:38:24.030" endtime="20200727 21:38:24.031"></status>
+<kw name="GIVEN i acess page" library="validation">
+<kw name="Wait Click" library="setup">
+<arguments>
+<arg>${close_modal}</arg>
+<arg>${close_modal}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 09:55:44.307" endtime="20200728 09:55:48.540"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click}</arg>
+</arguments>
+<msg timestamp="20200728 09:55:48.542" level="INFO">Clicking element 'xpath://*[@ng-click="ctrlModalHome.Close()"]'.</msg>
+<status status="PASS" starttime="20200728 09:55:48.541" endtime="20200728 09:55:51.209"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:44.304" endtime="20200728 09:55:51.209"></status>
+</kw>
+<kw name="Input" library="setup">
+<arguments>
+<arg>${inptorigin}</arg>
+<arg>${origin}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${input}</arg>
+</arguments>
+<msg timestamp="20200728 09:55:51.212" level="INFO">Typing text 'Recife, Internacional dos Guararapes - Gilberto Freyre, Brasil (REC)' into text field 'id:inptorigin'.</msg>
+<status status="PASS" starttime="20200728 09:55:51.211" endtime="20200728 09:55:53.074"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 09:55:53.074" endtime="20200728 09:55:53.107"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:51.210" endtime="20200728 09:55:53.107"></status>
+</kw>
+<kw name="Input Click" library="setup">
+<arguments>
+<arg>${inptdestination}</arg>
+<arg>${ui-id-2702587}</arg>
+<arg>${destination}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${input}</arg>
+</arguments>
+<msg timestamp="20200728 09:55:53.108" level="INFO">Typing text 'São Paulo' into text field 'id:inptdestination'.</msg>
+<status status="PASS" starttime="20200728 09:55:53.108" endtime="20200728 09:55:53.505"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${secElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 09:55:53.505" endtime="20200728 09:55:53.962"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${secElement}</arg>
+</arguments>
+<msg timestamp="20200728 09:55:53.963" level="INFO">Clicking element 'id:ui-id-2702587'.</msg>
+<status status="PASS" starttime="20200728 09:55:53.963" endtime="20200728 09:55:54.092"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:53.107" endtime="20200728 09:55:54.092"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:44.300" endtime="20200728 09:55:54.093"></status>
+</kw>
+<kw name="WHEN fill" library="validation">
+<kw name="Wait Click" library="setup">
+<arguments>
+<arg>${lblDepartureDate}</arg>
+<arg>${lblDepartureDate}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 09:55:54.095" endtime="20200728 09:55:54.135"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click}</arg>
+</arguments>
+<msg timestamp="20200728 09:55:54.135" level="INFO">Clicking element 'id:lblDepartureDate'.</msg>
+<status status="PASS" starttime="20200728 09:55:54.135" endtime="20200728 09:55:54.260"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:54.094" endtime="20200728 09:55:54.261"></status>
+</kw>
+<kw name="Wait Click" library="setup">
+<arguments>
+<arg>${day-3072020}</arg>
+<arg>${day-3072020}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 09:55:54.262" endtime="20200728 09:55:54.310"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click}</arg>
+</arguments>
+<msg timestamp="20200728 09:55:54.311" level="INFO">Clicking element 'id:day-3072020'.</msg>
+<status status="PASS" starttime="20200728 09:55:54.310" endtime="20200728 09:55:54.447"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:54.261" endtime="20200728 09:55:54.448"></status>
+</kw>
+<kw name="Wait Click" library="setup">
+<arguments>
+<arg>${arrivalDate}</arg>
+<arg>${arrivalDate}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 09:55:54.449" endtime="20200728 09:55:54.515"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click}</arg>
+</arguments>
+<msg timestamp="20200728 09:55:54.516" level="INFO">Clicking element 'id:arrivalDate'.</msg>
+<status status="PASS" starttime="20200728 09:55:54.515" endtime="20200728 09:55:54.743"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:54.448" endtime="20200728 09:55:54.744"></status>
+</kw>
+<kw name="Wait Click" library="setup">
+<arguments>
+<arg>${selectedDateReturn}</arg>
+<arg>${selectedDateReturn}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 09:55:54.745" endtime="20200728 09:55:54.790"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click}</arg>
+</arguments>
+<msg timestamp="20200728 09:55:54.791" level="INFO">Clicking element 'id:day-1082020'.</msg>
+<status status="PASS" starttime="20200728 09:55:54.790" endtime="20200728 09:55:54.959"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:54.744" endtime="20200728 09:55:54.960"></status>
+</kw>
+<kw name="Wait Click" library="setup">
+<arguments>
+<arg>${ipt-passenger-class}</arg>
+<arg>${ipt-passenger-class}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 09:55:54.962" endtime="20200728 09:55:54.994"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click}</arg>
+</arguments>
+<msg timestamp="20200728 09:55:54.996" level="INFO">Clicking element 'id:ipt-passenger-class'.</msg>
+<status status="PASS" starttime="20200728 09:55:54.995" endtime="20200728 09:55:55.920"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:54.960" endtime="20200728 09:55:55.920"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:54.093" endtime="20200728 09:55:55.920"></status>
+</kw>
+<kw name="THEN should results" library="validation">
+<kw name="Wait Click" library="setup">
+<arguments>
+<arg>${add-adult}</arg>
+<arg>${add-adult}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 09:55:55.923" endtime="20200728 09:55:55.977"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click}</arg>
+</arguments>
+<msg timestamp="20200728 09:55:55.978" level="INFO">Clicking element 'id:add-adult'.</msg>
+<status status="PASS" starttime="20200728 09:55:55.978" endtime="20200728 09:55:56.127"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:55.921" endtime="20200728 09:55:56.127"></status>
+</kw>
+<kw name="Wait Click" library="setup">
+<arguments>
+<arg>${btn-search}</arg>
+<arg>${btn-search}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 09:55:56.128" endtime="20200728 09:55:56.163"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click}</arg>
+</arguments>
+<msg timestamp="20200728 09:55:56.164" level="INFO">Clicking element 'id:btn-search'.</msg>
+<status status="PASS" starttime="20200728 09:55:56.163" endtime="20200728 09:55:57.869"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:56.127" endtime="20200728 09:55:57.869"></status>
+</kw>
+<status status="PASS" starttime="20200728 09:55:55.921" endtime="20200728 09:55:57.869"></status>
 </kw>
 <kw name="Close Navigation" library="setup" type="teardown">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20200727 21:38:24.418" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200727 21:38:24.032" endtime="20200727 21:38:24.419"></status>
+<msg timestamp="20200728 09:55:59.134" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200728 09:55:57.870" endtime="20200728 09:55:59.135"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3</arg>
 </arguments>
-<msg timestamp="20200727 21:38:27.421" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200727 21:38:24.420" endtime="20200727 21:38:27.421"></status>
+<msg timestamp="20200728 09:56:02.136" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200728 09:55:59.135" endtime="20200728 09:56:02.136"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200727 21:38:27.421" endtime="20200727 21:38:27.603"></status>
+<status status="PASS" starttime="20200728 09:56:02.137" endtime="20200728 09:56:02.459"></status>
 </kw>
-<status status="PASS" starttime="20200727 21:38:24.031" endtime="20200727 21:38:27.604"></status>
+<status status="PASS" starttime="20200728 09:55:57.870" endtime="20200728 09:56:02.460"></status>
 </kw>
-<status status="FAIL" starttime="20200727 21:38:20.419" endtime="20200727 21:38:27.604" critical="yes">No keyword with name 'Given I buy a flight ticket' found.</status>
+<status status="PASS" starttime="20200728 09:55:38.997" endtime="20200728 09:56:02.460" critical="yes"></status>
 </test>
-<status status="FAIL" starttime="20200727 21:38:19.678" endtime="20200727 21:38:27.606"></status>
-</suite>
-<status status="FAIL" starttime="20200727 21:38:19.589" endtime="20200727 21:38:27.610"></status>
+<status status="PASS" starttime="20200728 09:55:38.153" endtime="20200728 09:56:02.476"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1">Critical Tests</stat>
-<stat pass="0" fail="1">All Tests</stat>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" id="s1" name="Steps">Steps</stat>
-<stat pass="0" fail="1" id="s1-s1" name="Validation">Steps.Validation</stat>
+<stat pass="1" fail="0" id="s1" name="Validation">Validation</stat>
 </suite>
 </statistics>
 <errors>
