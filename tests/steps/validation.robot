@@ -9,5 +9,9 @@ Test Teardown       Close Navigation
 
 ***Test Cases***
 
-Given I buy a flight ticket 
-    Test case 1
+Scenario: Buy Ticket 
+    #Given I buy a flight ticket    
+    #When click date day and date return      
+    #Then is click button Sarch
+    Buy Ticket
+            
