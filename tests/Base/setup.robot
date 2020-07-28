@@ -11,9 +11,9 @@ ${url_base}        https://www.viajanet.com.br/
 
 Input
         [Arguments]             ${element}      ${input}
-        Input Text              ${element}      ${input}
         Wait Until Element Is Visible           ${element}
-
+        Input Text              ${element}      ${input}
+    
 Input Click
         [Arguments]             ${element}      ${secElement}        ${input}
         Input Text              ${element}      ${input}
@@ -27,7 +27,7 @@ Wait Click
 
 Wait Text
         [Arguments]     ${element}              ${getText}              ${text}
-          Wait Until Element Is Visible         ${element}
+        Wait Until Element Is Visible         ${element}
 
 Browser open
         Open Browser        ${url_base}     chrome
